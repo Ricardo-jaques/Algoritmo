@@ -10,14 +10,13 @@ O objetivo deste repositório é registrar minha evolução durante o aprendizad
 
 Entre os conteúdos trabalhados estão:
 
-* Lógica de programação
-* Variáveis e tipos de dados
-* Operadores
-* Estruturas condicionais
-* Estruturas de repetição
-* Entrada e saída de dados
-* Incrementos e decrementos
-* Resolução de problemas utilizando algoritmos
+* variavei
+* if else
+* and or
+* operadores
+* estrutura de repetição
+* metodos
+* vetores
 
 ## 🎯 Objetivo
 
