@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ptbR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOKU</title>
+    <style>
+        body{
+            background: linear-gradient(to left,blue,red,green) ;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h2>meu formulario</h2>
+    <span>nome: </span>
+    <input type="text" name="" id="input_nome">
+    <button onclick="mostrar()">clique para mostrar</button>
+   
+
+</body>
+</html>
+
+<script>
+    
+    function mostrar(){
+        if(input_nome.value=="Ricardo"){
+         alert('esse mano é muito bom ' + input_nome.value)
+        }
+        else if(input_nome.value=="Ric"){
+            alert("esse mano é muito bom"  + input_nome.value)
+        }
+         else if(input_nome.value=="ric"){
+            alert('esse mano é muito bom ' + input_nome.value)
+        }
+         else if(input_nome.value=="ricardo"){
+            alert('esse mano é muito bom ' + input_nome.value)
+        }
+        else{
+            alert('esse cara não é roludo ' + input_nome.value)
+        }
+    }
+</script>

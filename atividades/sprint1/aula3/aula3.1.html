@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"  name="" id="ipt_numero1">
+    <input type="text" name="" id="ipt_numero2">
+    <button onclick="multiplicar()">Multiplicar</button>
+    <button onclick="dividir()">Dividir</button>
+    <button onclick="somar()">Somar</button>
+    <button onclick="subtrair()">Subtrair</button>
+    <div id="exibir"></div>
+</body>
+</html>
+
+<script>
+
+    
+    function multiplicar(){
+        exibir.innerHTML=`o Resultado sera ${ (Number( ipt_numero1 .value) * Number(ipt_numero2.value))}`
+    }
+    function dividir(){
+        exibir.innerHTML=`o Resultado sera ${ipt_numero1  .value / ipt_numero2.value}`
+    }
+      function somar(){
+        exibir.innerHTML=`o Resultado sera ${ (Number(ipt_numero1.value) + Number(ipt_numero2.value))}`
+    }
+    function subtrair(){
+        exibir.innerHTML=`o Resultado sera  ${ ipt_numero1  .value - ipt_numero2.value}`
+    }
+</script>

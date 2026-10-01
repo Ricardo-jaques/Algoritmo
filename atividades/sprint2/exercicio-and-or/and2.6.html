@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inp_nota">informe a nota
+        <input type="text" name="" id="inp_nota">
+    </label>
+    <label for="inp_frequencia">informe a frequencia
+        <input type="text" name="" id="inp_frequencia">
+    </label>
+    <button onclick="enviar()">Analisar aluno</button>
+
+    <div id="exibir"></div>
+</body>
+</html>
+
+<script>
+    function enviar(){
+        let frequencia= Number(inp_frequencia.value)
+         let nota= Number(inp_nota.value)
+
+      
+         if(nota>=0 && nota<6){
+            exibir.innerHTML=`Aluno ficou abaixo da média`
+        } else if(nota>=6 && nota<8){
+            exibir.innerHTML=`Aluno ficou na média`
+        } else{ 
+            exibir.innerHTML=`Aluno acima da média`
+        }
+                  if(frequencia>=75){
+            exibir.innerHTML=`Aluno aprovado por frequência`
+        } else{
+            exibir.innerHTML=`Aluno reprovado por frequência`
+        }
+        if (frequencia<0 || frequencia>100){
+             alert('Onde já se viu frequência <0 ou >100?!')
+                exibir.innerHTML=``
+             }
+                   if(nota <0 || nota>10 ){
+            alert('Onde já se viu nota <0 ou >10?!')
+                exibir.innerHTML=``
+            }
+    }
+</script>

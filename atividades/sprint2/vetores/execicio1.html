@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inp_pergunta">informe o nome de uma fruta
+        <input type="text" name="" id="inp_fruta">
+    </label>
+    <button onclick="enviar()">Pesquisar</button>
+
+    <span id="exibir"></span>
+</body>
+</html>
+
+<script>
+   let fruta =['laranja','mamao','maça']
+
+   function enviar(){
+    let frutaDigitada = inp_fruta.value
+
+    if(fruta.includes(frutaDigitada)){
+        exibir.innerHTML=` A fruta ${frutaDigitada} existe na lista.`
+    }
+    else{
+        exibir.innerHTML=`Não existe a fruta ${frutaDigitada} na lista.`
+    }
+   }
+</script>

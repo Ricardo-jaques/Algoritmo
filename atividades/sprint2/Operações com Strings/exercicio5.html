@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inp_senha"> informe a sua senha 
+        <input type="text" oninput="enviar()" name="" id="inp_senha">
+    </label>
+    <span id="exibir"></span>
+</body>
+</html>
+
+<script>
+    function enviar(){
+        let senha = inp_senha.value
+let alteração = senha.replaceAll('a', '@').replaceAll('A', '@').replaceAll('e', '3').replaceAll('E', '3')        
+        exibir.innerHTML=`${alteração}`
+    }
+</script>

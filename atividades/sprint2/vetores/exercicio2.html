@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for=""> Informe o destino da Viagem
+        <input type="text" name="" id="inp_viagem">
+    </label>
+    <button onclick="enviar()">Adicionar</button>
+    <button onclick="Primeira()">Primeira viagem</button>
+    <button onclick="Terceira()">Terceira viagem</button>
+    <button onclick="Ultima()">Última viagem</button>
+    <span id="exibir"></span>
+</body>
+</html>
+
+<script>
+    let lista = []
+    function enviar(){
+        let viagem = inp_viagem.value
+        lista.push(viagem)
+    }
+     function Primeira(){
+      if(lista.length>=1){
+        exibir.innerHTML=`${lista[0]}`
+      }else{
+        exibir.innerHTML=`Ainda não viajou`
+      }
+    }
+     function Terceira(){
+       if(lista.length>=3){
+         exibir.innerHTML=`${lista[2]}`
+       }else{
+        exibir.innerHTML=`Ainda fez a terceira viagem`
+       }
+    }
+     function Ultima(){
+       if(lista.length>=1){
+        exibir.innerHTML=`${lista[lista.length-1]}`
+       }else{
+        exibir.innerHTML=`Ainda não viajou`
+       }
+    }
+
+</script>

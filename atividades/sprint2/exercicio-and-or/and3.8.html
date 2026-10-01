@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inp_idade">informe a sua idade 
+        <input type="text" name="" id="inp_idade">
+    </label>
+    <p> Possui alguma cormobidade?
+    <select name="" id="select_cormobidade">
+        <option>Sim</option>
+        <option>Não</option>
+    </select>
+    </p>
+    <p> o seu cadastro no sistema de saude esta em dia?
+    <select name="" id="select_saude">
+        <option>Sim</option>
+        <option>Não</option>
+    </select>
+    </p>
+    <button onclick="enviar()">Verificar prioridade</button>
+</body>
+</html>
+
+<script>
+    function enviar(){
+        let idade= Number(inp_idade.value)
+        let cormobidade= select_cormobidade.value
+        let saude= select_saude.value
+
+        if(saude=='Sim' &&  (idade>=60 || cormobidade == 'Sim')){
+            alert('Vacinação prioritária liberada')
+        } else{
+            alert('Vacinação prioritária não liberada')
+        }
+    }
+</script>

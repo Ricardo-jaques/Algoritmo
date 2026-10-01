@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inp_voltas"> quantas voltas o carro dara na corrida?
+        <input type="text" name="" id="inp_voltas">
+    </label>
+    <button onclick="enviar()">Iniciar corrida!</button>
+    <br>
+    <span id="exibir"></span>
+</body>
+</html>
+
+<script>
+    
+    function enviar(){
+        let voltas = Number(inp_voltas.value)
+        let contagem = 0
+        while(contagem<voltas){
+            contagem++
+            exibir.innerHTML+=`Carro dando a ${contagem}ª volta <br>`
+        }
+        exibir.innerHTML+=`Corrida finalizada! <br>`
+
+    }
+</script>

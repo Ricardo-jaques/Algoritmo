@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> informe a temperatura do ambiente
+        <input type="text" name="" id="inp_temperatura">
+    </p>
+    <button onclick="enviar()">Verificar clima</button>
+    <div id="exibir"></div>
+  
+</body>
+</html>
+<script>
+    function enviar(){
+        let temperatura =Number(inp_temperatura.value) 
+        if(temperatura<10){
+            exibir.innerHTML=`Apropriada p/ conservar alimento`
+    exibir.innerHTML=`<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPW8i3Bug734sm5qT08Vkdku44iukV-CKok1-ZrLaDlQ&s=10" alt="">`
+        }
+        else{
+            exibir.innerHTML=`Inapropriada p/ conservar alimento`
+    exibir.innerHTML=`<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtRQaKrPqv6ZD39VqH1iADHZBO3XFYMIl8_NrIub7P-w&s=10" alt="">`
+
+        }
+        }
+    
+</script>

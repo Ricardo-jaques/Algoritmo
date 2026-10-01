@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> Informe seu Nome
+        <input type="text" name="" id="inp_nome">
+    </p>
+    <p> Informe a sua idade
+        <input type="text" name="" id="inp_idade">
+    </p>
+    <button onclick="enviar()">Avaliar aluno</button>
+    <div id="exibir"></div>
+</body>
+</html>
+
+<script>
+ function enviar(){
+    let nome = inp_nome.value
+    let idade = Number(inp_idade.value)
+    let mensagem = exibir
+    if(idade>=18){
+        mensagem.innerHTML=`${nome}, vamos tirar a CNH?`
+    }
+    else{
+        mensagem.innerHTML=`${nome}, vai jogar PlayStation!`
+    }
+ }
+</script>

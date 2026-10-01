@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for=""> informe a hora do dia que voce utiliza a netflix
+        <input type="text" name="" id="ipt_netflix">
+    </label>
+    <button onclick="enviar()">Ver recomendação</button>
+    <div id="exibir"></div>
+</body>
+</html>
+
+<script>
+    function enviar(){
+    let horario = Number(ipt_netflix.value)
+
+    if(horario >=19 && horario <=21){
+        exibir.innerHTML=`Não é recomendável que você assista sua série favorita no horário ${horario}!`
+    }
+      else{
+        exibir.innerHTML=`O horário ${horario} é adequado para assistir sua série favorita!`
+    }
+}
+</script>

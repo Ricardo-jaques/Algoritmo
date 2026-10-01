@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> informe a última série (SITCOM) que voce assistiu
+        <input type="text" name="" id="inp_Serie">
+    </p>
+    <p>informe quantos episodios voce assistiu
+        <input type="text" name="" id="inp_Ep">
+    </p>
+    <button onclick="enviar()">Verificar nível</button>
+    <div id="exibir"></div>
+</body>
+</html>
+
+<script>
+    function enviar(){
+        let ep =  Number(inp_Ep.value) 
+        let serie = inp_Serie.value
+        let resultado= ep*22;
+        let horas = resultado / 60;
+        exibir.innerHTML=`Vejo que você gosta da série ${serie}  <br>`
+        if(horas >=30){
+            exibir.innerHTML+=`Uau, você realmente gosta dessa série!`
+        }
+    }
+</script>

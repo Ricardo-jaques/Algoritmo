@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> informe quantos chocolater ira comprar
+        <input type="text" name="" id="inp_Chocolates">
+    </p>
+   
+    <button onclick="enviar()">Compra</button>
+    <div id="exibir"></div>
+  
+</body>
+</html>
+<script>
+    function enviar(){
+        let quanti = Number(inp_Chocolates.value)
+        let conta= (quanti * 3.00).toFixed(2)
+        exibir.innerHTML=`o valor da sua compra foi de ${conta}`
+        if(quanti >=  12){
+            conta= (quanti * 2.50).toFixed(2)
+        exibir.innerHTML=`o valor da sua compra foi de ${conta}`
+        
+        }
+    }
+</script>

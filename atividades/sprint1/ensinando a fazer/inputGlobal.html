@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>nome:</span>
+    <input type="text" name="" id="ipt_nome">
+    <button onclick="alertar()">alertar</button>
+    <button onclick="cumprimentar()">cumprimentar</button>
+    <div id="mensagem"></div>
+</body>
+</html>
+
+<script>
+    //let nome = ipt_nome.value; não faz isso não funciona coloca dentro da function
+// global é para se usar em varios lugares e tem que preservar a função então é global
+function alertar(){
+    let nome = ipt_nome.value;
+    alert("ola "+ nome);
+
+}
+function cumprimentar(){
+    let nome = ipt_nome.value;
+    mensagem.innerHTML=`oi! ${nome}`
+}
+
+</script>

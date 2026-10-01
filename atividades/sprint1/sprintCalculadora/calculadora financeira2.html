@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Baunilha</title>
+</head>
+<body>
+
+<p>
+  Quantidade de favas produzidas no ano:
+  <input type="number" id="inp_qnt" placeholder="Ex: 500">
+</p>
+
+<p>
+  Qual a finalidade de venda? (gourmet, extrato ou pó):
+  <input type="text" id="inp_area" placeholder="Digite: gourmet, extrato ou pó">
+</p>
+
+<button onclick="enviar()">Calcular Umidade</button>
+<br><br>
+<span id="exibir"></span>
+
+</body>
+</html>
+
+<script>
+    function enviar() {  
+        let quantidade = Number(inp_qnt.value);
+        let area = inp_area.value.toLowerCase();
+
+        let antes = (quantidade * 0.015).toFixed(2); // peso inicial verde em kg
+
+        // ==========================================
+        // 1. IF DO PÓ (Foco em umidade baixa < 10%)
+        // ==========================================
+        if (area == "pó") {
+            let seca = antes * 0.20; // <--- COLOQUE AQUI A % DE MASSA SECA DO PÓ
+            
+            let perda = (antes * 0.783).toFixed(2); 
+            let apos = (antes - perda).toFixed(2); 
+            let peso_perdido = ((perda / antes) * 100).toFixed(2);
+            
+            let agua = apos - seca;
+            let umidade = (agua / apos) * 100;
+
+            let potes_po = apos / 0.05;
+            let faturamento_po = potes_po * 40;
+
+            if (umidade < 10) {
+                exibir.innerHTML = `O total de favas produzidas foi de ${quantidade} unidades.<br>
+                    Peso antes: ${antes}kg | Peso após: ${apos}kg.<br>
+                    Umidade final: <b>${umidade.toFixed(2)}%</b> (Perda: ${peso_perdido}%).<br>
+                    Status: Ideal para produção de pó! 🌿<br><br>
+                    <b>--- RESULTADO FINANCEIRO ---</b><br>
+                    Rendimento: ${potes_po.toFixed(0)} potes de 50g.<br>
+                    Faturamento: <b>R$ ${faturamento_po.toFixed(2)}</b>`;
+            } else {
+                exibir.innerHTML = `Para fazer pó a umidade precisa estar abaixo de 10%. A umidade atual é de ${umidade.toFixed(2)}%.`;
+            }
+        }
+
+        // ==========================================
+        // 2. IF DO EXTRATO (Foco em umidade 20% a 25%)
+        // ==========================================
+        if (area == "extrato") {
+            let seca = antes * 0.20; // <--- COLOQUE AQUI A % DE MASSA SECA DO EXTRATO
+            
+            let perda = (antes * 0.75).toFixed(2);  
+            let apos = (antes - perda).toFixed(2); 
+            let peso_perdido = ((perda / antes) * 100).toFixed(2);
+            
+            let agua = apos - seca;
+            let umidade = (agua / apos) * 100;
+
+            let extrato = apos * 10000; 
+            let frasco = extrato / 30;
+            let faturamento_por_ml = extrato * 1.42;
+
+            if (umidade >= 20) {
+                if (umidade <= 25) {
+                    exibir.innerHTML = `O total de favas produzidas foi de ${quantidade} unidades.<br>
+                        Peso antes: ${antes}kg | Peso após: ${apos}kg.<br>
+                        Umidade final: <b>${umidade.toFixed(2)}%</b> (Perda: ${peso_perdido}%).<br>
+                        Status: Padrão ideal para Extrato! 🧪<br><br>
+                        <b>--- RESULTADO FINANCEIRO ---</b><br>
+                        Volume total: ${extrato.toFixed(0)} ml.<br>
+                        Rendimento: ${frasco.toFixed(0)} frascos de 30ml.<br>
+                        Faturamento: <b>R$ ${faturamento_por_ml.toFixed(2)}</b> (R$ 1,42/ml)`;
+                } else {
+                    exibir.innerHTML = `A umidade atual de ${umidade.toFixed(2)}% está acima do ideal para extrato (máximo 25%).`;
+                }
+            } else {
+                exibir.innerHTML = `A umidade atual de ${umidade.toFixed(2)}% está abaixo do ideal para extrato (mínimo 20%).`;
+            }
+        }
+
+        // ==========================================
+        // 3. IF DO GOURMET (Foco em umidade >= 30%)
+        // ==========================================
+        if (area == "gourmet") {
+            let seca = antes * 0.20; // <--- COLOQUE AQUI A % DE MASSA SECA GOURMET
+            
+            let perda = (antes * 0.714).toFixed(2); 
+            let apos = (antes - perda).toFixed(2); 
+            let peso_perdido = ((perda / antes) * 100).toFixed(2);
+            
+            let agua = apos - seca;
+            let umidade = (agua / apos) * 100;
+
+            let tubos_gourmet = quantidade;
+            let faturamento_gourmet = tubos_gourmet * 30;
+
+            if (umidade >= 30) {
+                exibir.innerHTML = `O total de favas produzidas foi de ${quantidade} unidades.<br>
+                    Peso antes: ${antes}kg | Peso após: ${apos}kg.<br>
+                    Umidade final: <b>${umidade.toFixed(2)}%</b> (Perda: ${peso_perdido}%).<br>
+                    Status: Vagem Gourmet Premium! ✨<br><br>
+                    <b>--- RESULTADO FINANCEIRO ---</b><br>
+                    Rendimento: ${tubos_gourmet} tubos premium a vácuo.<br>
+                    Faturamento: <b>R$ ${faturamento_gourmet.toFixed(2)}</b>`;
+            } else {
+                exibir.innerHTML = `A vagem precisa ter pelo menos 30% de umidade para ser Gourmet. A umidade atual é de ${umidade.toFixed(2)}%.`;
+            }
+        }
+    }
+</script>

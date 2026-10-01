@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><p>quanto é o valor da passagem?
+    <input type="text" placeholder="informe o valor da passagem"  name="" id="ipt_passagem">
+    </p>
+    <p>quantas viagens voce faz por mes?
+    <input type="text" placeholder="Informe o valir da avaliaçao semestral" name="" id="ipt_mes">
+    </p>
+    <p> quanto é a distançia do seu trabalho até sua casa em (km)
+    <input type="text" placeholder="Informe o valir da avaliaçao continuada" name="" id="ipt_distancia">
+    </p>
+    <button onclick="calcular()">Calcular VT</button>
+    <div id="exibir"></div>
+</body>
+</html>
+
+<script>
+
+    function calcular(){
+         let passagemV = Number(ipt_passagem.value);
+        let viagens = Number(ipt_mes.value);
+        let distancia = Number(ipt_distancia.value);
+        let viagensAP = viagens * 0.1;
+        let valorAP = distancia*0.75;
+        let onibusViagens= viagens - viagensAP ;
+        let calculoAP = valorAP * viagensAP;
+        let onibusValor = passagemV * onibusViagens;
+        let calculoTotal = onibusValor + calculoAP;
+        let mensagem =`Você vai gastar R$${calculoTotal} por mês com transporte.`
+        exibir.innerHTML=mensagem
+    }
+</script>

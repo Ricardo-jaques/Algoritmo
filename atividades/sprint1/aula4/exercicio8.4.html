@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> informe o saldo da conta 
+        <input type="text" name="" id="inp_saldo">
+    </p>
+    <p> informe o valor do débito
+        <input type="text" name="" id="inp_conta">
+    </p>
+    <button onclick="enviar()">Analisar conta</button>
+    <div id="exibir" ></div>
+</body>
+</html>
+
+<script>
+     
+    function enviar(){
+        let saldo = Number(inp_saldo.value)
+        let conta = Number(inp_conta.value)
+        let retirar = saldo-conta;
+
+        exibir.innerHTML=`O saldo atual da conta corrente é ${retirar}`
+        if(retirar<=0){
+            exibir.innerHTML=`<b style="color: red;">O saldo atual da conta corrente é ${retirar}</b>`
+        }
+
+    }
+</script>

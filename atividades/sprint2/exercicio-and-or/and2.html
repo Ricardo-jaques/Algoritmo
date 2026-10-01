@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><label for="ipt_Renda_user"> Informe a sua Renda
+    <input type="text" name="" id="ipt_Renda_user">
+    </label>
+    <label for="ipt_Renda_familiar"> Informe a sua Renda Familiar
+    <input type="text" name="" id="ipt_Renda_familiar">
+    </label>
+    <button onclick="enviar()">Verificar ajuda</button>
+</body>
+</html>
+
+<script>
+    function enviar(){
+        let usuario =Number(ipt_Renda_user.value);
+        let Familiar=Number(ipt_Renda_familiar.value);
+
+        if(usuario <=1050 && usuario>=0 && Familiar<=2100 && Familiar>=0){
+            alert( "Você terá direito!",)
+        }
+        else{
+            alert( "Você NÃO terá direito")
+        }
+    }
+</script>

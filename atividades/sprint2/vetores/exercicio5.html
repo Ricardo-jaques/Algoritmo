@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">informe os filmes que voce mais gosta
+        <input type="text" name="" id="inp_filme">
+    </label>
+    <button onclick="enviar(), Favoritos()">Cadastrar filme</button>
+    <span id="exibir"></span>
+</body>
+</html>
+
+<script>
+    let lista = []
+    function enviar(){
+        let filme = inp_filme.value
+        lista.push(filme)
+    }
+    function Favoritos(){
+        
+        exibir.innerHTML=`<br> Seu filme favorito: ${lista[0]}<br>`
+        if(lista.length>=3){
+        exibir.innerHTML+=  `Seu 3º filme favorito: ${lista[2]}<br>`
+        }else{
+            exibir.innerHTML+=`Seu 3º filme favorito: Ainda não existe<br>`
+        }
+        exibir.innerHTML+=`Total de filmes cadastrados: ${lista.length} <br>`
+    }
+</script>

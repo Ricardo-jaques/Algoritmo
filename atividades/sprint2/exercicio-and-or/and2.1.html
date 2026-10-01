@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inp_atendimento"> qual foi a nota do atendimento
+        <input type="text" name="" id="inp_atendimento">
+    </label>
+    <button onclick="enviar()">Avaliar atendimento</button>
+    <div id="exibir"></div>
+</body>
+</html>
+
+<script>
+    function enviar(){
+        nota = Number(inp_atendimento.value)
+
+        if(nota<0 || nota>10){
+            exibir.innerHTML=`Avaliar atendimento`
+        }
+        else if(nota>=0 && nota<5){
+            exibir.innerHTML=`Não aprovado`
+        }
+        else if(nota>=5 && nota<6){
+            exibir.innerHTML=`Neutro`
+        }
+        else{
+            exibir.innerHTML=`Aprovado`
+        }
+    }
+
+</script>

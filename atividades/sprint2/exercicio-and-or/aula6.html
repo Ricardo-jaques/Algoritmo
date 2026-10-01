@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="ipt_idade">idade
+        <input type="text" name="" id="ipt_idade"> <br>
+    </label>
+        <select id="select_voto">
+            <option>sim</option>
+            <option>não</option>
+        </select>
+
+      
+    <button onclick="enviar()">verificar voto</button>
+    <div id="exibir"></div>
+</body>
+</html>
+
+<script>
+    function enviar(){
+    let idade = Number(ipt_idade.value);
+    let voto = select_voto.value
+
+    if(idade>=18 && voto=='sim'){
+        exibir.innerHTML=`voce pode votar`
+    }
+    else{
+        exibir.innerHTML=`voce não pode votar`
+    }
+}
+</script>

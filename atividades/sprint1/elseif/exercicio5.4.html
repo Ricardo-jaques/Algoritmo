@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> Informe o peso da criança
+        <input type="text" name="" id="inp_Peso">
+    </p>
+    <button onclick="enviar()">enviar Peso</button>
+    <div id="receba"></div>
+</body>
+</html>
+
+<script>
+    function enviar(){
+    let Peso = Number(inp_Peso.value)
+    
+    if(Peso <= 13.5){
+        receba.innerHTML=`Abaixo do peso`
+
+    } 
+      else if(Peso == 18.3){
+        receba.innerHTML=`Peso perfeito`
+      }
+    
+    else if(Peso <=21.2){
+        receba.innerHTML=`Peso na média`
+
+    }
+    else{
+        receba.innerHTML=`Acima do peso`
+
+    }
+}
+</script>

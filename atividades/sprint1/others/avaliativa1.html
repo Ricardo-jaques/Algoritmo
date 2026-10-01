@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>informe a distância que será percorrida, em quilômetros (KM)
+        <input type="text" name="" id="inp_km">
+    </p>
+    <p>informe a velocidade média do carro, em quilômetros por hora (KM/h)
+        <input type="text" name="" id="inp_kmH">
+    </p>
+    <button onclick="enviar()">Simular</button>
+    <div id="exibir"></div>
+</body>
+</html>
+<script>
+    let total = 25;
+    let gasolina = total;
+    function enviar(){
+        let Km = Number(inp_km.value) 
+        let KmH =Number(inp_kmH.value)
+        
+        let tempo = Km / KmH
+        
+        let consumo = gasolina - (Km/10)
+        let porcentagemC = (consumo/total)*100;
+        let restante = gasolina - consumo
+        let porcentagemL = (restante/total)*100;
+        exibir.innerHTML=`Ao percorrer ${Km} km, em velocidade média de ${KmH} km/h, a viagem durou ${tempo} horas. Ao todo, foram gastos ${restante} litros de combustível ${porcentagemL}%. Restam ${consumo} litros de combustível ${porcentagemC}%<br>`
+
+        if(porcentagemC > 30){
+        exibir.innerHTML+=`Continue a rodar!`
+            
+        }
+        else{
+        exibir.innerHTML+=`É melhor parar para reabastecer!`
+
+        }
+        gasolina = gasolina - restante
+    }
+</script>

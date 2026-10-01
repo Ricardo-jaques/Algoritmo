@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="enviar()">Filtrar números Cabalísticos</button>
+    <br>
+    <span id="exibir"></span>
+</body>
+</html>
+
+<script>
+    function enviar(){
+        let contagem = 0;
+        while(contagem<30){
+           contagem++
+            if(contagem==3 ||contagem==4 || contagem==7 || contagem==10 || contagem==12){
+                exibir.innerHTML+=``
+            }
+        }
+    }
+</script>

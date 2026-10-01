@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<p>Umidade atual (%):
+<input type="text" id="inp_umidade">
+</p>
+<button onclick="enviar()">Verificar umidade</button>
+
+<div id="exibir"></div>
+</body>
+</html>
+<script>
+    function enviar() {
+
+    let umidade = Number(inp_umidade.value);
+
+    if (umidade <0) {
+        exibir.innerHTML = `Erro! Digite um valor entre 0 e 100%.`;
+    }
+    else if(umidade > 100){
+        exibir.innerHTML = `Erro! Digite um valor entre 0 e 100%.`;
+        }
+    else if (umidade < 12) {
+        exibir.innerHTML = `Estado de Emergencia`;
+    }
+    else if (umidade <= 20) {
+        exibir.innerHTML = `Estado de alerta`;
+    }
+    else if (umidade <= 30) {
+        exibir.innerHTML = `Estado de atenção`;
+    }
+    else {
+        exibir.innerHTML = `Nenhum risco`;
+    }
+}
+</script>

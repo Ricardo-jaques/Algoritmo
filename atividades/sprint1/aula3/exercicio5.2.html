@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><p>horas de sono
+    <input type="text" placeholder="informe quantas horas voce dormiu"  name="" id="ipt_sono">
+    </p>
+    <button onclick="dormiu()">Calcular Sono</button>
+    <div id="exibir"></div>
+</body>
+</html>
+
+<script>
+
+    function dormiu(){
+        let sono = Number(ipt_sono.value);
+        let a = sono*0.05;
+        let b = sono*0.45;
+        let c = sono*0.3;
+        let d = sono*0.2;
+      
+        let mensagem =`Ao dormir ${sono} horas, você dormiu: <br> <br> ${a} horas na fase 1 <br> <br> ${b} horas na fase 2 <br> <br> ${c} horas na fase 3 <br> <br> ${d} horas na fase Rem  `
+        exibir.innerHTML=mensagem
+    }
+</script>

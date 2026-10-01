@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>quantas latinhas voce toma por dia:
+        <input type="text" name="" id="ipt_latinhas">
+    </p>
+    <button onclick="latinha()">Quantos refris?</button>
+
+    <div id="fale"></div>
+</body>
+</html>
+
+<script>
+    function latinha(){
+       let lata = Number(ipt_latinhas.value)
+        let calc = lata * 365
+        fale.innerHTML = `voce bebeu ${calc}` 
+
+        if(calc>=500){
+            fale.innerHTML += ` Cuidado com a Diabetes` 
+        }
+    }
+</script>

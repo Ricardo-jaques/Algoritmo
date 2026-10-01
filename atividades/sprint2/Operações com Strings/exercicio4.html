@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<label for="inp_palavra1"> informe a 1 palavra
+<input type="text" name="" id="inp_palavra1">
+</label>
+<br>
+<label for="inp_palavra2"> informe a 2 palavra
+<input type="text" name="" id="inp_palavra2">
+</label>
+<br>
+    <button onclick="enviar()">Analisar Palavras</button>
+    <br>
+    <span id="exibir"></span>
+</body>
+</html>
+
+<script>
+function enviar(){
+let palavra1 = inp_palavra1.value
+let palavra2 = inp_palavra2.value
+
+
+
+if(palavra1 == palavra2 ){
+exibir.innerHTML=`As palavras ${palavra1} e ${palavra2} são exatamente iguais!"`
+}
+ else if(palavra1.toLowerCase() == palavra2.toLowerCase() ){
+exibir.innerHTML=`As palavras ${palavra1} e ${palavra2} possuem o mesmo conteúdo, mas a digitação é diferente (maiúsculas e minúsculas)`
+}
+else{
+    exibir.innerHTML=`As palavras ${palavra1} e ${palavra2} são completamente diferentes!`
+
+}
+}
+</script>

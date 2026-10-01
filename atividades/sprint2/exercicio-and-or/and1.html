@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="temperatura_ideal"> informe a temperatura atual:
+    <input type="text" name="" id="inp_temperatura">
+    </label>
+
+    <button onclick="enviar()">Ver situação</button>
+    
+</body>
+</html>
+
+<script>
+
+    function enviar(){ 
+    let temperatura = Number(inp_temperatura.value)
+
+    if(temperatura >=21 && temperatura<=24){
+        alert  ("Temperatura confortável :D")
+    }
+    else{
+        alert ("Temperatura DESCONFORTÁVEL :C")
+    }
+    }
+</script>

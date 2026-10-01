@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> informe a quantidade de KWh consumida no mês 
+        <input type="text" name="" id="inp_kw">
+    </p>
+    <button onclick="enviar()">Calcular conta de luz</button>
+    
+</body>
+</html>
+<script>
+  function enviar(){
+    let kw = Number(inp_kw.value)
+    let valor1 = kw*0.85;
+    let somado = valor1 - (valor1 * 0.10)
+    
+        let arrumado = valor1.toFixed(2)
+        let arruamdo2 = somado.toFixed(2)
+     
+    if(kw>100){
+        alert('o valor a ser pago sera de '+ arrumado)
+    }
+    else{
+        alert("o valor a ser pago sera de " + arruamdo2)
+    }
+
+  }
+</script>

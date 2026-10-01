@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<p>Digite seu Pokémon:
+<input type="text" id="inp_pokemon">
+</p>
+<button onclick="enviar()">Escolher Pokémon</button>
+
+<div id="exibir"></p>
+</body>
+</html>
+
+<script>
+
+    function enviar() {
+
+    let pokemon = inp_pokemon.value;
+
+    if (pokemon == "bulbasaur") {
+    exibir.innerHTML=`<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStqzoV4T8A9ppz4VXWcnlwkxcVvKyyU-BL1IymBpHoMw&s=10">`        
+    }
+    else if (pokemon == "charmander") {
+
+        exibir.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRorp3yO9ivFpZvVF9dcak-3-Bb2GswyCoLLWFRSyBawQ&s=10" alt="" srcset="">`;
+
+    }
+    else if (pokemon == "squirtle") {
+
+        exibir.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLMW0lRAJ0WG--fz3u8udeCfqb3cJ7tgrbARgm-KJBXA&s" alt="" srcset="">`;
+
+    }
+    else {
+        exibir.innerHTML = "Pokémon não reconhecido.";
+    }
+}
+</script>

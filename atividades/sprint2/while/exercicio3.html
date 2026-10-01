@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="enviar()">Diga algo sobre a matéria de Algoritmos</button>
+    <br>
+    <span id="exibir"></span>
+</body>
+</html>
+
+<script>
+    let mensagem = `naruto é D+`
+    
+    function enviar(){
+        let numero = 1;
+        while(numero<8){
+            exibir.innerHTML+=`${numero}.${mensagem}<br>`
+            numero++
+        }
+    }
+</script>

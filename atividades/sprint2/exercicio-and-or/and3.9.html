@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> informe o seu plano
+    <select id="select_plano">
+        <option>Premium</option>
+        <option>Básico</option>
+    </select>
+    </p>
+    
+    <label for="inp_hora">informe a hora atual de 0 a 23: 
+        <input type="text" id="inp_hora">
+    </label>
+    
+    <p>a biometria foi valida?
+    <select id="select_biometria">
+        <option>Sim</option>
+        <option>Não</option>
+    </select>
+    </p>
+    
+    <button onclick="enviar()">Liberar catraca</button>
+</body>
+</html>
+
+<script>
+    function enviar() {
+        let plano = select_plano.value;
+        let hora = Number(inp_hora.value);
+        let biometria = select_biometria.value;
+
+        if (biometria == 'Sim' && (plano == 'Premium' || (plano == 'Básico' && hora >= 6 && hora <= 22))) {
+            alert('Acesso liberado');
+        } else {
+            alert('Acesso negado');
+        }
+    }
+</script>

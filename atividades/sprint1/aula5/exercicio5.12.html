@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<p>Digite um número:
+<input type="text" id="inp_numero">
+</p>
+<button onclick="enviar()">Múltiplo de 5</button>
+
+<p id="exibir"></p>
+</body>
+</html>
+
+<script>
+    function enviar(){
+
+    let numero = Number(inp_numero.value);
+
+    if (numero <= 0) {
+        exibir.innerHTML = `Digite um número maior que zero`;
+       
+    }
+
+    let resto = numero % 5;
+
+    if (resto == 0) {
+        exibir.innerHTML = `Perfeito, esse número é múltiplo de cinco`;
+    }
+    else if (resto == 1) {
+        exibir.innerHTML = `Vich, sobrou um`;
+    }
+    else if (resto == 2) {
+        exibir.innerHTML = `Para esse o resto é dois`;
+    }
+    else if (resto == 3) {
+        exibir.innerHTML = `Com mais dois daria certo`;
+    }
+    else if (resto == 4) {
+        exibir.innerHTML = `Só faltou 1 para ser múltiplo de 5`;
+    }
+}
+</script>

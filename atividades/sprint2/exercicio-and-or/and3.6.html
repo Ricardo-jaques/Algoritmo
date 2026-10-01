@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inp_itens">informe a quantidade de itens comprados
+        <input type="text" name="" id="inp_itens">
+    </label>
+    <label for="inp_total">informe o valor total da compra
+        <input type="text" name="" id="inp_total">
+    </label>
+    <p> Voce é do Programa fidelidade?
+    <select name="" id="select_Fidelidade">
+        <option>Sim</option>
+        <option>Não</option>
+    </select>
+    </p>
+     <label for="inp_cupom">informe o cupom digitado
+        <input type="text" name="" id="inp_cupom">
+    </label>
+    <button onclick="enviar()">Aplicar desconto</button>
+</body>
+</html>
+
+<script>
+    function enviar(){
+        let itens= Number(inp_itens.value)
+        let total= Number(inp_total.value)
+        let fidelidade= select_Fidelidade.value
+        let cupom= inp_cupom.value
+
+        if(total>=50 && itens>=3 && (fidelidade =='Sim' || cupom == 'PROMO10')){
+            alert('Desconto aplicado!')
+        } else{
+            alert('Compra não elegível para desconto')
+        }
+    }
+</script>

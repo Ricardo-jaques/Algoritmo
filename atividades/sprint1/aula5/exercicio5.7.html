@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>quantos pães franceses Voce tem comido por dia:
+        <input type="text" name="" id="inp_franceses">
+    </p>
+    <p>quantos pacotes de bolacha recheada voce tem comido por dia:
+        <input type="text" name="" id="inp_Recheado">
+    </p>
+    <p>quantos copos de achocolatado Voce tem tomado por dia
+        <input type="text" name="" id="inp_Copos">
+    </p>
+    <button onclick="enviar()">Verificar calorias</button>
+    <div id="receba"></div>
+</body>
+</html>
+
+<script>
+    function enviar(){
+    let franceses = Number(inp_franceses.value)
+    let Recheado = Number(inp_Recheado.value)
+    let copos =  Number(inp_Copos.value)
+
+    let CalFran= franceses*50;
+    let Calreche= Recheado*80;
+    let Calcopo= copos*70;
+
+    let total = CalFran + Calcopo + Calreche;
+
+    
+    if(total < 200){
+        receba.innerHTML=`Parabéns, vai ficar em forma!`
+
+    } 
+    else  if(total < 400){
+        receba.innerHTML=`Cuidado, vai ficar menos saudável !`
+      }
+    
+     else{
+        receba.innerHTML=`Alerta crítico de saúde !!!`
+
+    }
+
+}
+</script>

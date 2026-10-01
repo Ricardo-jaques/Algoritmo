@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div_contador">contador: 0</div>
+    <button onclick="incrementar()">incrementar</button>
+    <button onclick="decrementar()">decrementar</button>
+    <div id="exibir"></div>
+</body>
+</html>
+<script>
+    let contador = 0;
+    function incrementar(){
+        
+        contador += 1;
+       // contador = contador + 1;
+       //contador ++;
+        div_contador.innerHTML=`contador: ${contador} `
+
+    }
+        function decrementar(){
+        
+        contador -= 1;
+       // contador = contador - 1;
+       //contador --;
+        div_contador.innerHTML=`contador: ${contador} `
+        
+    }
+
+    // quando se colocar -- contador ou ++contador ele 1 vai somar e depois fazer o calculo
+</script>

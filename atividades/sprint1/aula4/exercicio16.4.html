@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> informe 1 numero
+        <input type="text" name="" id="inp_numero">
+    </p>
+    <button onclick="enviar()">Analisar</button>
+    <div id="exibir"></div>
+   
+</body>
+</html>
+<script>
+    function enviar(){
+        let n1 = Number(inp_numero.value)
+
+        if(n1  % 2 ==  0){
+            exibir.innerHTML=` <div style="color: red; background: yellow;">Esse número é PAR </div>`
+        }
+        else{
+            exibir.innerHTML=` <b style="color: red; ">Esse número é impar </b>`
+
+        }
+    }
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> Informe o seu Saldo
+        <input type="text" name="" id="inp_Saldo">
+    </p>
+    <p> Informe o valor a tirar da conta
+        <input type="text" name="" id="inp_Retirar">
+    </p>
+    <button onclick="enviar()">Analisar conta</button>
+    <div id="exibir"></div>
+</body>
+</html>
+
+<script>
+    function enviar(){
+        let Saldo = Number(inp_Saldo.value) 
+        let Retirar = Number(inp_Retirar.value) 
+        let calc = Saldo - Retirar
+            if(calc<0){
+            exibir.innerHTML=`<b style="color:Red"> o saldo atual da conta corrente é ${calc}  </b>`
+
+            }
+            else{
+            exibir.innerHTML=`<i style="color:blue"> o saldo atual da conta corrente é ${calc} </i>`
+
+            }
+
+        }
+    
+</script>

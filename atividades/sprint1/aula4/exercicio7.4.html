@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> Informe o valor da Renda:
+        <input type="text" name="" id="inp_Renda">
+    </p>
+    <p>Informe o valor da prestação
+        <input type="text" name="" id="inp_Presta">
+    </p>
+    <button onclick="enviar()">Verificar financiamento</button>
+    <div id="exibir"></div>
+    
+</body>
+
+</html>
+
+<script>
+    function enviar(){
+        let prestação = Number(inp_Presta.value)
+        let Renda = Number(inp_Renda.value)
+        let calculo = (prestação/Renda*100).toFixed(2)
+
+
+        exibir.innerHTML=`A prestação corresponde a ${calculo}% da renda familiar <br>`
+
+        if(calculo>30){
+            exibir.innerHTML+=`<b style="color: red"> Será necessário complementar a renda familiar </b>`
+        }
+    }
+
+</script>

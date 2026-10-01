@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> Informe a sua Renda
+        <input type="text" name="" id="inp_Renda">
+    </p>
+    <button onclick="enviar()">Analisar Renda</button>
+    <div id="receba"></div>
+</body>
+</html>
+
+<script>
+    function enviar(){
+    let Renda = Number(inp_Renda.value)
+    
+    if(Renda <= 250){
+        receba.innerHTML=`Classe E`
+    } else if(Renda <=900){
+        receba.innerHTML=`Classe D`
+
+    }else if(Renda<=2500){
+        receba.innerHTML=`Classe C`
+    }
+    else if(Renda<=9500){
+        receba.innerHTML=`Classe B`
+    }
+    else{
+        receba.innerHTML=`Classe A`
+
+    }
+}
+</script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>informe o 1 numero
+        <input type="text" name="" id="inp_1">
+    </label>
+    <label> informe o 2 numero
+        <input type="text" name="" id="inp_2">
+    </label>
+    <button onclick="enviar()">"Curto 3 e 5!</button>
+    <br>
+    <span id="exibir"></span>
+</body>
+</html>
+
+<script>
+    function enviar(){
+        let numero1 = Number(inp_1.value)
+        let numero2 = Number(inp_2.value)
+        let mensagem = ''
+        while(numero1<=numero2){
+            
+            if(numero1 % 3 == 0 && numero1  % 5 == 0){
+                mensagem+='É TRI! É PENTA! <br>'
+            }
+
+            
+            else if(numero1 % 3 == 0){
+                 mensagem+='É TRI <br>'
+            }
+            else if(numero1 % 5 == 0){
+                 mensagem+='É PENTA! <br>'
+            }
+            else{
+                mensagem += `${numero1} <br>`
+            }
+           
+           numero1++
+        }
+        exibir.innerHTML=`${mensagem} <br>`;
+    }
+</script>

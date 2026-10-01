@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <label for="inp_Letra"> Informe uma Letra
+        <input type="text" name="" placeholder="ex: morango"  id="inp_Letra">
+     </label>
+     <br>
+     <button onclick="enviar()">Verificar Letras</button>
+     <span id="exibir"></span>
+     
+
+</body>
+</html>
+
+<script>
+let palavra='sou o melhor'
+function enviar(){
+    let letra = inp_Letra.value
+
+     if(palavra.includes(letra)){
+        exibir.innerHTML=`A letra ${letra} aparece na palavra secreta!`
+     }else{
+        exibir.innerHTML=`A letra ${letra} não aparece na palavra secreta!`
+     }
+ 
+ 
+}
+
+</script>

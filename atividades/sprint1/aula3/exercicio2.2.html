@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> inserir 1 numero
+    <input type="text"  name="" id="ipt_numero1">
+    </p>
+    <p> inserir 2 numero
+    <input type="text" name="" id="ipt_numero2">
+    </p>
+    <button onclick="quociente()">Quociente</button>
+    <button onclick="resto()">Resto</button>
+    <button onclick="completo()">Completo</button>
+    <div id="exibir"></div>
+</body>
+</html>
+
+<script>
+
+    function quociente(){
+         let n1 = Number(ipt_numero1.value);
+        let n2 = Number(ipt_numero2.value);
+        let Resultado = n1/n2;
+        let mensagem =`A divisão de ${n1} por ${n2} é: ${Resultado}`
+        exibir.innerHTML=mensagem
+    }
+      function resto(){
+         let n1 = Number(ipt_numero1.value);
+        let n2 = Number(ipt_numero2.value);
+        let Resultado = n1%n2;
+        let mensagem =`A divisão de ${n1} por ${n2} é: ${Resultado}`
+        exibir.innerHTML=mensagem
+    }
+    function completo(){
+         let n1 = Number(ipt_numero1.value);
+        let n2 = Number(ipt_numero2.value);
+       let quociente = n1/n2;
+       let Resto = n1%n2;
+        let mensagem =`A divisão de ${n1} por ${n2} é: ${quociente} e o resto dessa divisão é: ${Resto}`
+        exibir.innerHTML=mensagem
+    }
+</script>

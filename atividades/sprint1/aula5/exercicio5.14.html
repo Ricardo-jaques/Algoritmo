@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<p>Como você está se sentindo?
+    <input type="text" id="inp_humor">
+</p>
+
+<button onclick="enviar()">Mostrar Humor</button>
+
+<div id="exibir"></div>
+
+</body>
+</html>
+
+<script>
+    function enviar(){
+
+        let humor = inp_humor.value;
+
+        if(humor == "feliz"){
+            exibir.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8qPvOxgCDRASQdVka0Jfhh-opQAQHghpOJ_VOYhTTng&s=10" alt="" srcset=""> Feliz 😊 `
+
+        }else if(humor == "triste"){
+            exibir.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROVy8dP_vHmKkWhwqB_S_yWioh3PeSjfXbhjS5Walmiw&s=10" alt="">Triste 😢`
+
+        }else if(humor == "bravo"){
+            exibir.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3veokwM5lOsPGvE0McMnrXPmg471FoxCDpi6M1fke5A&s=10" alt="">Bravo 😡`
+
+        }else if(humor == "surpreso"){
+            exibir.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzewsxUhofHBMXb8DVrBieJ-elGb_FC8m6uPtmQ8mH0w&s=10" alt="">Surpreso 😲`
+
+        }else if(humor == "cansado"){
+            exibir.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRKilG1WMX2KzNjI7EQw4d200S7JnIgZuNCn6deTCc4g&s=10" alt="" srcset="">Cansado 😴`
+
+        }else{
+            exibir.innerHTML = `Humor não reconhecido.`
+            imagem.src = ""
+        }
+    }
+</script>

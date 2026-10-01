@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inp_enem"> informe a sua nota do enem
+        <input type="text" name="" id="inp_enem">
+    </label>
+    <label for="inp_interno"> informe a sua nota interna
+        <input type="text" name="" id="ipn_interno">
+    </label>
+    <button onclick="enviar()">Avaliação</button>
+</body>
+</html>
+
+<script>
+    function enviar(){
+    let enem = Number(inp_enem.value)
+    let interno= Number(ipn_interno.value)
+    if(enem >=800 || interno>=700){
+        alert("Parabéns! Aprovado")
+
+    }else{
+        alert("Tente semestre que vem!")
+    }
+}
+</script>

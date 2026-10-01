@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Informe a sua Nota ou do amigo
+        <input type="text" name="" id="inp_Nota">
+    </p>
+    <button onclick="enviar()">Classificar aluno</button>
+    <div id="receba"></div>
+</body>
+</html>
+
+<script>
+    function enviar(){
+    let Nota = Number(inp_Nota.value)
+    
+    if(Nota < 5){
+        receba.innerHTML=`Aluno precisa de muita ajuda`
+
+    } 
+      else if(Nota < 7){
+        receba.innerHTML=`Aluno na média`
+      }
+    
+    else if(Nota < 9.5){
+        receba.innerHTML=`Aluno na acima da média`
+
+    }
+    else{
+        receba.innerHTML=`Aluno fora da curva`
+
+    }
+}
+</script>

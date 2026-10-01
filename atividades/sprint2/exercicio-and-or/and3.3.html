@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inp_Familiar">informe a renda capita do aluno
+        <input type="text" name="" id="inp_Familiar">
+    </label>
+    <label for="inp_Familiar">informe a media escolar
+        <input type="text" name="" id="inp_Media">
+    </label>
+     <select name="" id="select_Federado">
+        <option>Sim</option>
+        <option>Não</option>
+    </select>
+    <button onclick="enviar()">Verificar bolsa</button>
+</body>
+</html>
+
+<script>
+    function enviar(){
+        let Familiar= Number(inp_Familiar.value)
+        let Media= Number(inp_Media.value)
+        let Federado= select_Federado.value
+
+        if((Familiar<800 && Media >8) || Federado =='Sim' && Media > 6){
+            alert('Bolsa integral concedida!')
+        } else{
+            alert('Bolsa não concedida')
+        }
+    }
+</script>

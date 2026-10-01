@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><p>nome
+    <input type="text" placeholder="informe seu nome"  name="" id="ipt_nome">
+    </p>
+    <p> semestral
+    <input type="text" placeholder="Informe o valir da avaliaçao semestral" name="" id="ipt_semestral">
+    </p>
+    <p> continuada
+    <input type="text" placeholder="Informe o valir da avaliaçao continuada" name="" id="ipt_continuada">
+    </p>
+    <button onclick="Media()">Calcular Media</button>
+    <div id="exibir"></div>
+</body>
+</html>
+
+<script>
+
+    function Media(){
+         let nome = ipt_nome.value;
+        let semestral = Number(ipt_semestral.value);
+        let continuada = Number(ipt_continuada.value);
+
+        let ResultadoC =(continuada*0.4);
+        let ResultadoS =(semestral*0.6);
+        let media = (ResultadoC+ResultadoS);
+        let mensagem =`A média de ${nome} será de ${media}`
+        exibir.innerHTML=mensagem
+    }
+</script>

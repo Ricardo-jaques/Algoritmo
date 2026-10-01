@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><label for="ipt_individual"> Informe a sua Renda
+    <input type="text" name="" id="ipt_individual">
+    </label>
+    <label for="ipt_familiar"> Informe a sua Renda Familiar
+    <input type="text" name="" id="ipt_familiar">
+    </label>
+    <button onclick="enviar()">Verificar ajuda</button>
+</body>
+</html>
+
+<script>
+    function enviar(){
+        let individual =Number(ipt_individual.value);
+        let Familiar=Number(ipt_familiar.value);
+
+        if(usuario<=2000 || Familiar<=3000){
+            alert( "Você terá direito ao auxílio",)
+        }
+        else{
+            alert( "Sem direito ao auxílio")
+        }
+    }
+</script>

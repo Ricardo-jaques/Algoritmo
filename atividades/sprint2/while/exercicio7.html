@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="enviar()">S2 Pares</button>
+<br>
+    <span id="exibir"></span>
+</body>
+</html>
+<script>
+    function enviar(){
+        let contagem = 0
+        while(contagem<=100){
+            contagem++
+              if(contagem % 2 == 0){
+                exibir.innerHTML+=`Par <br>`
+
+              }else{
+              exibir.innerHTML+=`impar <br>`
+              }
+            }
+        }
+
+</script>

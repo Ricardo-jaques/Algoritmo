@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> informe 1 numero
+        <input type="text" name="" id="inp_numero1">
+    </p>
+    <p> informe 2 numero
+        <input type="text" name="" id="inp_numero2">
+    </p>
+    <button onclick="enviar()">Testar</button>
+    <div id="exibir"></div>
+  
+</body>
+</html>
+<script>
+    function enviar(){
+        let n1 = Number(inp_numero1.value)
+        let n2 = Number(inp_numero2.value)
+        let teste = n1 % n2 ;
+        if(teste ==  0){
+        exibir.innerHTML=`<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPXk2uWGpotjTGLCuqPCvwnJazqG2QSjONSBvk6O9msA&s=10" alt="">`
+        
+        }
+        else{
+        exibir.innerHTML=`<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDbZcGvkVEzLZrKQGKV9qnjkFF9s2MoBUqZYAouOqFFA&s=10" alt="">`
+
+        }
+    }
+</script>

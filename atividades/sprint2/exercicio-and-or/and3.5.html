@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>a sua passagem esta valida?
+     <select name="" id="select_doc_Passageiro">
+        <option>Sim</option>
+        <option>Não</option>
+    </select>
+    </p>
+    <p>Voce fez chech-in?
+     <select name="" id="select_check">
+        <option>Sim</option>
+        <option>Não</option>
+    </select>
+    </p>
+    <label for=""> quantas horas antes voce chegou no aeroporto?
+        <input type="text" name="" id="inp_ante">
+    </label>
+    <button onclick="enviar()">Verificar embarque</button>
+</body>
+</html>
+
+<script>
+    function enviar(){
+        let documento= select_doc_Passageiro.value
+        let check= select_check.value
+        let horas= Number(inp_ante.value)
+
+        if((documento=='Sim' && (check=='Sim' || horas>=2))
+        ){
+            alert('Embarque liberado')
+        } else{
+            alert('Embarque negado')
+        }
+    }
+</script>

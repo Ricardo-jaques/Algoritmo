@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inp_Frase">informe uma Frase
+<input type="text" name="" id="inp_Frase">
+</label>
+<br>
+    <button onclick="enviar()">Analisar Frase</button>
+    <br>
+    <span id="exibir"></span>
+</body>
+</html>
+
+<script>
+function enviar(){
+let frase = inp_Frase.value
+let incluir= frase.includes('teste') || frase.includes('abc') || frase.includes('spam')
+
+
+if(incluir){
+exibir.innerHTML=`<span id="exibir" style="color: red;">Frase Inválida</span>`
+}
+else{
+    exibir.innerHTML=`<span id="exibir" style="color: green ;">Frase Válida!</span>`
+}
+}
+
+</script>

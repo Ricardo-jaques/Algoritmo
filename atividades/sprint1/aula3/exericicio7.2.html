@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><p>informe o valor da pizza:
+    <input type="text" placeholder="informe o valor da pizza"  name="" id="ipt_pizza">
+    </p>
+    <p>informe o sabor da pizza:
+    <input type="text" placeholder="informe o sabor da pizza"  name="" id="ipt_sabor">
+    </p>
+    <p>quantos amigos irão comer:
+    <input type="text" placeholder="informe o valor da pizza"  name="" id="ipt_amigos">
+    </p>
+    <button onclick="pizza()">Ver valor por amigo</button>
+    <div id="exibir"></div>
+</body>
+</html>
+
+<script>
+
+    function pizza(){
+        let valor = Number(ipt_pizza.value);
+        let sabor = ipt_sabor.value;
+        let quantidade = Number(ipt_amigos.value);
+        let calculo = valor/quantidade;
+        let mensagem =`   Cada amigo vai colaborar com R$${calculo} para a pizza de ${sabor}.  `
+        exibir.innerHTML=mensagem
+    }
+</script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>quanto é o valor da pizza    
+        <input type="text" name="" id="ipt_valor">
+    </p>
+    <p>quantos amigos irao
+        <input type="text" name="" id="ipt_amigos">
+    </p>
+    <button onclick="enviar()">Rola a pizza?</button>
+    <div id="exibir" ></div>
+    
+</body>
+</html>
+
+<script>
+ 
+    function enviar(){
+           let valor = Number(ipt_valor.value);
+    let amigos = Number(ipt_amigos.value);
+    let dividido = valor / amigos;
+
+        exibir.innerHTML=`Cada amigo vai pagar ${dividido} pela pizza <br>`
+
+        if(dividido>20){
+             exibir.innerHTML+=`<i style ="color:red;">Deu ruim! Pizza muito cara!<i>`
+        }
+    }
+</script>

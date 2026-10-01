@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Informe uma frase
+         <input type="text" id="inp_frase" oninput="enviar()">
+</label>
+<label for="">Informe o numero de qual letra deseja ver 
+<input type="text" id="inp_posicao" oninput="enviar()">
+</label>
+<div id="exibir"></div>
+</body>
+</html>
+
+<script>
+    function enviar() {
+    let frase = inp_frase.value
+    let posicao = Number(inp_posicao.value)
+
+    exibir.innerHTML = `
+        A primeira letra é: ${frase[0]}<br>
+        A ${posicao}ª letra é: ${frase[posicao - 1]}<br>
+        A última letra é: ${frase[frase.length - 1]}
+    `
+}
+</script>

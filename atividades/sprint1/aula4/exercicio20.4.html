@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> informe a sua frequencia
+        <input type="text" name="" id="inp_frequencia">
+    </p>
+    <button onclick="enviar()">Analisar frequência</button>
+    <div id="exibir"></div>
+  
+</body>
+</html>
+<script>
+    function enviar(){
+        let frequencia =Number(inp_frequencia.value) 
+        if(frequencia<50){
+    exibir.innerHTML=`<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkg499hBX7u6sQRw0AUCbnAuHrJ8rNsWWZmGYI4oepKA&s=10" alt="">`
+        }
+        else{
+    exibir.innerHTML=`<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStg1osUgDVU4mW78YqxPadGKxbZ3Ocp_o5498NWJkTag&s=10" alt="">`
+
+        }
+        }
+    
+</script>

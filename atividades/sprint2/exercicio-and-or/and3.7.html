@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inp_idade">informe a sua idade 
+        <input type="text" name="" id="inp_idade">
+    </label>
+    <p> Possui cnh valida?
+    <select name="" id="select_cnh">
+        <option>Sim</option>
+        <option>Não</option>
+    </select>
+    </p>
+    <label for="inp_mensal">informe a sua renda mensal
+        <input type="text" name="" id="inp_mensal">
+    </label>
+    <p> apresentou um fiador?
+    <select name="" id="select_fiador">
+        <option>Sim</option>
+        <option>Não</option>
+    </select>
+    </p>
+    <button onclick="enviar()">Analisar financiamento</button>
+</body>
+</html>
+
+<script>
+    function enviar(){
+        let idade= Number(inp_idade.value)
+        let cnh= select_cnh.value
+        let mensal= Number(inp_mensal.value)
+        let fiador= select_fiador.value
+
+        if(idade>=21 && cnh =='Sim' && (mensal>=2500 || fiador =='Sim')){
+            alert('Financiamento aprovado')
+        } else{
+            alert('Financiamento negado')
+        }
+    }
+</script>

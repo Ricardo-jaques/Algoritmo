@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> informe uma Temperatura
+        <input type="text" name="" id="inp_Temperatura">
+    </p>
+    <button onclick="enviar()">Temperatura</button>
+    <div id="receba"></div>
+</body>
+</html>
+
+<script>
+    function enviar(){
+    let Temperatura = Number(inp_Temperatura.value)
+    
+    if(Renda <= 14){
+        receba.innerHTML=`Congelante`
+    } else if(Renda <=21){
+        receba.innerHTML=`Com Frio`
+
+    }else if(Renda<=24){
+        receba.innerHTML=`Confortável`
+    }
+    else if(Renda<=31){
+        receba.innerHTML=`Com Calor`
+    }
+    else{
+        receba.innerHTML=`Calor escaldante`
+
+    }
+}
+</script>

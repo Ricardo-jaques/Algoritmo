@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <label for=""> Informe a senha
+        <input type="password" name="" oninput="enviar()" id="inp_senha">
+     </label>
+     <br>
+     <span id="exibir"></span>
+     
+
+</body>
+</html>
+
+<script>
+
+function enviar(){
+    let senha = inp_senha.value
+
+     if(senha.length>=8 && (senha!=senha.toUpperCase() && senha!=senha.toLowerCase())){
+        exibir.innerHTML=`Forte`
+    }
+    else if(senha != senha.toUpperCase() && senha!=senha.toLowerCase() ){
+         exibir.innerHTML=`Média`
+    }
+   else if(senha.length>=8){
+        exibir.innerHTML=`Fraca`
+    }
+   
+   else{
+        exibir.innerHTML=`Insegura`
+    }
+ 
+ 
+}
+
+</script>

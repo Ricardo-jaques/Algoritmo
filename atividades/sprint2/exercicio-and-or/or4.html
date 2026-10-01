@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <select id="select_pagamento">
+            <option disabled selected>Selecione uma dessas opçoes </option>
+            <option>dinheiro </option>
+            <option>débito</option>
+            <option>credito</option>
+            <option>boleto</option>
+        </select>
+    <button onclick="enviar()">Analisar compra</button>
+    <div id="exibir"></div>
+</body>
+</html>
+
+<script>
+    function enviar(){
+    let pagamento = select_pagamento.value;
+
+    if(pagamento=="dinheiro" || pagamento=="débito"){
+        exibir.innerHTML=`Você terá que pagar a vista`
+    }
+    else{
+        exibir.innerHTML=`Pagamento poderá ser parcelado`
+    }
+}
+</script>

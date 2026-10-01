@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for=""> informe os bairros onde morou
+        <input type="text" name="" id="inp_bairros">
+    </label>
+     <label for=""> informe qual das vezes que voce informou o lugar ex:1 lugar de moradia
+        <input type="text" name="" id="inp_numero">
+    </label>
+    <button onclick="enviar()">Cadastrar bairro</button>
+    <button onclick="moradia()">Relembrar moradia</button>
+    
+    <span id="exibir"></span>
+</body>
+</html>
+
+<script>
+    let lista = []
+    function enviar(){
+        let bairros = inp_bairros.value
+        lista.push(bairros)
+    }
+     function moradia(){
+        let numero= inp_numero.value
+      if(numero <= lista.length){
+        exibir.innerHTML=`${lista[numero-1]}`
+      }else{
+        exibir.innerHTML=`Você ainda não morou Xº bairro!" `
+      }
+    }
+    
+
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="ipt_nota">informe uma nota
+        <input type="text" name="" id="ipt_nota">
+    </label>
+    <label for="ipt_frequencia">frequencia aluno
+        <input type="text" name="" id="ipt_frequencia">
+    </label>
+    <button onclick="enviar()">Avaliar aluno</button>
+</body>
+</html>
+
+<script>
+    function enviar(){
+    let nota = Number(ipt_nota.value)
+    let frequencia = Number(ipt_frequencia.value)
+        if(nota>=6 && frequencia>= 75){
+            alert("Parabéns! Aprovado!")
+        }
+        else{
+            alert("Infelizmente, não foi desta vez")
+        }
+}
+</script>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="tipo_bilhete">
+        <option value="Comum">Comum</option>
+    <option value="Estudante">Estudante</option>
+    <option value="Idoso">Idoso/PNE</option>
+</select>
+    <select name="" id="tipo_passagem">
+        <option value="unica">Passagem única</option>
+    <option value="integracao">Passagem integração</option>
+</select>
+<button onclick="enviar()">Simular preço</button>
+<span id="exibir"></span>
+</body>
+</html>
+
+<script>
+    function enviar(){
+        let bilhete = tipo_bilhete.value
+        let passagem = tipo_passagem.value
+        let estudanteU = 2.20
+        let estudanteI = 2.95
+        let comumU= 4.40
+        let comumI=5.90
+        let idoso = 0
+        
+        if(bilhete == 'Comum' && passagem=='unica'){
+            exibir.innerHTML=`Valor da passagem escolhida: ${comumU} `
+        }
+       else if(bilhete == 'Comum' && passagem=='integracao'){
+            exibir.innerHTML=`Valor da passagem escolhida: ${comumI} `
+        }
+             else if(bilhete == 'Estudante' && passagem=='unica'){
+            exibir.innerHTML=`Valor da passagem escolhida: ${estudanteU} `
+        }
+        else if(bilhete == 'Estudante' && passagem=='integracao'){
+            exibir.innerHTML=`Valor da passagem escolhida: ${estudanteI} `
+        }
+        else if(bilhete == 'Idoso' && passagem=='unica' || bilhete=='Idoso' && passagem =='integracao'){
+            exibir.innerHTML=`Valor da passagem escolhida: ${idoso} `
+        }
+    }
+</script>

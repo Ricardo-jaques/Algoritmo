@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><p>inserir 1 numero
+    <input type="text"  name="" id="ipt_numero1">
+    </p>
+    
+    <p>inserir 2 numero
+    <input type="text" name="" id="ipt_numero2">
+    </p>
+    <button onclick="multiplicar()">razão</button>
+    <button onclick="dividir()">produto</button>
+    <button onclick="somar()">Somar</button>
+    <button onclick="subtrair()">diferença</button>
+    <div id="exibir"></div>
+</body>
+</html>
+
+<script>
+    
+     
+    function multiplicar(){
+         let n1 = Number(ipt_numero1.value);
+        let n2 = Number(ipt_numero2.value);
+        let Resultado = n1*n2;
+        let mensagem =`a razão entre ${n1} e ${n2} é ${Resultado}`
+        exibir.innerHTML=mensagem
+     
+
+       
+      
+    }
+    function dividir(){
+         let n1 = Number(ipt_numero1.value);
+        let n2 = Number(ipt_numero2.value);
+        let Resultado = n1/n2;
+        let mensagem =`O produto entre ${n1} e ${n2} é ${Resultado}`
+        exibir.innerHTML=mensagem
+    }
+      function somar(){
+         let n1 = Number(ipt_numero1.value);
+        let n2 = Number(ipt_numero2.value);
+        let Resultado = n1+n2;
+        let mensagem =`A Soma entre ${n1} e ${n2} é ${Resultado}`
+        exibir.innerHTML=mensagem
+    }
+    function subtrair(){
+         let n1 = Number(ipt_numero1.value);
+        let n2 = Number(ipt_numero2.value);
+       let Resultado = n1-n2;
+        let mensagem =`A Diferença entre ${n1} e ${n2} é ${Resultado}`
+        exibir.innerHTML=mensagem
+    }
+</script>

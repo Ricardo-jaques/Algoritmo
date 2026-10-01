@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> informe a 1 nota
+        <input type="text" name="" id="inp_nota1">
+    </p>
+    <p> informe a 2 nota
+        <input type="text" name="" id="inp_nota2">
+    </p>
+    <button onclick="enviar()">Verificar situação</button>
+    <div id="exibir"></div>
+</body>
+</html>
+<script>
+    function enviar(){
+    let n1=Number(inp_nota1.value)
+    let n2=Number(inp_nota2.value)
+    let media = (n1+n2)/2
+    if(media>=6){
+        alert("Parabéns, aprovado!")
+    } else{
+        alert("Tente outra vez...")
+    }
+}
+</script>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posto Anil Osag</title>
+</head>
+<body>
+
+    <select id="select_tipo">
+        <option>Gasolina</option>
+        <option>Etanol</option>
+        <option>Diesel</option>
+    </select>
+
+    <label for="inp_vendido">
+        Quanto foi vendido em litros
+        <input type="text" id="inp_vendido">
+    </label>
+
+    <label for="inp_hora">
+        Informe a hora da venda entre (00 a 23 – somente a hora, sem os minutos)
+        <input type="text" id="inp_hora">
+    </label>
+
+    <button onclick="enviar()">Faturamento</button>
+    <button onclick="encerrar()">Encerrar o dia</button>
+
+    <div id="exibir"></div>
+
+</body>
+</html>
+
+<script>
+
+    let acumuladoRecebimentos = 0;
+    let acumuladoDescontos = 0;
+    let gasolina = 0;
+    let etanol = 0;
+    let diesel = 0;
+    let vendas = 0;
+
+
+    function enviar(){
+
+        let tipo = select_tipo.value;
+        let quantidade = Number(inp_vendido.value);
+        let hora = Number(inp_hora.value);
+
+        let preco = 0;
+        let desconto = 0;
+        let valor = preco * quantidade;
+
+
+        if(tipo == 'Gasolina'){
+            preco = 6.49;
+            gasolina += quantidade;
+        }
+
+        if(tipo == 'Etanol'){
+            preco = 4.44;
+            etanol += quantidade;
+        }
+
+        if(tipo == 'Diesel'){
+            preco = 4.39;
+            diesel += quantidade;
+        }
+
+
+        
+        if(quantidade >= 20 && (hora >= 21 || hora <= 6)){
+
+            if(tipo == 'Gasolina'){
+                desconto = valor * 0.0505;
+            }
+
+            if(tipo == 'Etanol'){
+                desconto = valor * 0.048;
+            }
+
+            if(tipo == 'Diesel'){
+                desconto = valor * 0.0303;
+            }
+        }
+
+        let recebido = valor - desconto;
+
+        acumuladoRecebimentos += recebido;
+        acumuladoDescontos += desconto;
+
+        vendas++;
+
+        exibir.innerHTML += `
+            <p>
+                Venda ${vendas}ª – 
+                Valor Recebido = R$ ${recebido.toFixed(2)} – 
+                Desconto Concedido = R$ ${desconto.toFixed(2)} – 
+                Acumulado dos Recebimentos = R$ ${acumuladoRecebimentos.toFixed(2)} - 
+                Acumulado dos Descontos = R$ ${acumuladoDescontos.toFixed(2)}
+            </p>
+        `
+
+        
+    }
+
+
+    function encerrar(){
+
+        let total = gasolina + etanol + diesel;
+
+        let porcentagemGasolina = (gasolina / total) * 100;
+        let porcentagemEtanol = (etanol / total) * 100;
+        let porcentagemDiesel = (diesel / total) * 100;
+
+        exibir.innerHTML = `
+                Valor Total Recebido = R$ ${acumuladoRecebimentos.toFixed(2)}
+            
+                Valor Total dos Descontos = R$ ${acumuladoDescontos.toFixed(2)}
+            
+                Quantidade de Gasolina Vendida = ${gasolina.toFixed(2)} litros == 
+                ${porcentagemGasolina.toFixed(1)} %
+            
+                Quantidade de Etanol Vendida = ${etanol.toFixed(2)} litros == 
+                ${porcentagemEtanol.toFixed(1)} %
+            
+                Quantidade de Diesel Vendida = ${diesel.toFixed(2)} litros == 
+                

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inp_username">informe seu username
+        <input type="text" name="" id="inp_username">
+    </label>
+    <label for="inp_senha">informe sua senha
+        <input type="text" name="" id="inp_senha">
+    </label>
+    <label for="inp_pessoal">informe algo pessoal
+        <input type="text" name="" id="inp_pessoal">
+    </label>
+
+    <button onclick="enviar()">Autenticar</button>
+    <div id="exibir"></div>
+</body>
+</html>
+
+<script>
+    function enviar(){
+        let user = inp_username.value
+        let senha = inp_senha.value
+        let informaçao = inp_pessoal.value
+
+        if(user=='ana' && senha == 'braga' && (informaçao =='1949' || informaçao =='louro josé'))
+    {
+        exibir.innerHTML =`Usuário autenticado`
+    }
+    else{
+        exibir.innerHTML =`Falha na autenticação`
+    }
+    }
+</script>

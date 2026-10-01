@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inp_Frase">informe uma Frase
+<input type="text" name="" id="inp_Frase">
+</label>
+<br>
+<label for="inp_palavra"> coloque alguma palavra
+<input type="text" name="" id="inp_palavra">
+</label>
+<br>
+    <button onclick="enviar()">Analisar Frase</button>
+    <br>
+    <span id="exibir"></span>
+</body>
+</html>
+
+<script>
+function enviar(){
+let frase = inp_Frase.value
+let palavra = inp_palavra.value
+
+
+if(frase.startsWith(palavra) && frase.endsWith(palavra)){
+exibir.innerHTML=`A frase começa e termina com ${palavra}`
+}
+ else if(frase.startsWith(palavra)){
+exibir.innerHTML=`A frase começa com ${palavra}`
+}
+ else if(frase.endsWith(palavra)){
+exibir.innerHTML=`A frase termina com ${palavra}`
+}
+else{
+    exibir.innerHTML=`A frase não começa e nem termina com ${palavra}`
+
+}
+}
+</script>

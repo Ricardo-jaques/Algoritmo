@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inp_tamanho"> informe o tamanho da tela do celular
+        <input type="text" name="" id="inp_tamanho">
+    </label>
+    <select id="select_cor_celular">
+        <option selected disabled value="">selecione uma cor</option>
+        <option value="Preto">Preto</option>
+        <option value="Prata">Prata</option>
+        <option value="Azul">Azul</option>
+        <option value="Vermelho">Vermelho</option>
+
+    </select>
+    <button onclick="enviar()">Será que ele gosta?</button>
+    <div id="exibir"></div>
+
+</body>
+</html>
+
+<script>
+    function enviar(){
+        let tela = Number(inp_tamanho.value)
+        let cor = select_cor_celular.value
+
+        if(tela>6.5 && (cor == 'Preto' || cor == 'Prata' || cor == 'Azul' || cor == 'Vermelho') ){
+            exibir.innerHTML=`<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAgMkJ6gBrODd0-ogV2kXAB80LzXmK1S0tURL9AADiXg&s=10" alt="">  
+`
+        }
+        else{
+            exibir.innerHTML=`<img src="https://uploads.comparajogos.com.br/original/2X/a/a625f6083ea717b376134f1e7810b65bfcb86233.png" alt="">`
+        }
+    }
+</script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inp_ama">qual o nome da pessoa que voce mais ama?
+        <input type="text" name="" id="inp_ama">
+    </label>
+    <label for="inp_numero">o quanto voce ama esta pessoa
+        <input type="number" name="" id="inp_numero">
+    </label>
+    <button onclick="enviar()">Expressar amor</button>
+    <br>
+    <span id="exibir"></span>
+</body>
+</html>
+<script>
+    function enviar(){
+        let ama = inp_ama.value
+        let numero = Number(inp_numero.value)
+        let contagem = 0;
+        while(contagem<numero){
+            contagem++
+            exibir.innerHTML+=`${contagem} - ${ama}eu te amo! Sempre lembre disso!<br>`
+            
+        }
+    }
+</script>

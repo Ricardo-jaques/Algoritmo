@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inp_fruta"> informe o nome da fruta
+        <input type="text" name="" id="inp_fruta">
+    </label>
+    <button onclick="enviar()">Vai comer?</button>
+</body>
+</html>
+
+<script>
+    function enviar(){
+    let fruta = inp_fruta.value
+
+    if(fruta == 'uva' || fruta=='abacaxi'){
+        alert("Sim, vai comer " + fruta )
+
+    }else{
+        alert("A fruta "+ fruta +" ela não come")
+    }
+}
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>qual dos times de são paulo voce torce(São Paulo, Palmeiras, Corinthians, Santos)
+        <input type="text" name="" id="inp_Time">
+    </p>
+    <button onclick="enviar()">Fale sobre esse time</button>
+    <div id="receba"></div>
+    <div style="color: red; background: black;">
+</body>
+</html>
+
+<script>
+    function enviar(){
+    let Time = inp_Time.value
+    
+    if(Time == "Corinthians"){
+        receba.innerHTML=` <div style="color: white; background: black;"> Salve o Corinthians </div>`
+
+    } 
+     else if(Time == "Palmeiras"){
+        receba.innerHTML=`<div style="color: white; background: green;">Salve o alviverde imponente </div>`
+      }
+    
+    else if(Time == "Santos"){
+        receba.innerHTML=` <div style="color: black; background: white;">Agora quem dá a bola é o Santos </div>`
+
+    }
+   else  if(Time == "São Paulo"){
+        receba.innerHTML=`<div style="color: red; background: black;">Salve o Tricolor paulista</div>`
+
+    }
+}
+</script>

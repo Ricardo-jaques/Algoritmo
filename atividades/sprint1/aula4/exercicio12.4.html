@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> Informe quanto voce tem na conta
+        <input type="text" name="" id="inp_Valor">
+    </p>
+    <button onclick="enviar()">Verificar finanças</button>
+    <div id="exibir"></div>
+</body>
+</html>
+
+<script>
+    function enviar(){
+        let Conta = Number(inp_Valor.value) 
+
+        if(Conta==0){
+            exibir.innerHTML=`<div style="color:black"> Conta zerada </div>`
+        }
+        else{
+            if(Conta<0){
+            exibir.innerHTML=`<div style="color:Red"> Está devendo! </div>`
+
+            }
+            if(Conta>0){
+            exibir.innerHTML=`<div style="color:blue"> Saldo positivo! sorriso" </div>`
+
+            }
+
+        }
+    }
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> divisor
+        <input type="text" id="ipt_divisor">
+    </p>
+    <p> dividendo
+        <input type="text" id="ipt_dividendo">
+    </p>
+    <button onclick="calcular()">calcular resto</button>
+    <button onclick="dividir()">calcular resto</button>
+    <div id="exibir"></div>
+</body>
+</html>
+<script>
+ function calcular(){
+    let divisor = Number(ipt_divisor.value)
+    let dividendo = Number(ipt_dividendo.value)
+
+    let resto = divisor % dividendo;
+
+    exibir.innerHTML=`a divisão de ${divisor} e ${dividendo} o resto sera ${resto}`
+ }
+
+ function dividir(){
+    let divisor = Number(ipt_divisor.value)
+    let dividendo = Number(ipt_dividendo.value)
+
+    let resto = divisor / dividendo;
+    //  let resto = (divisor / dividendo).toFixed;
+    let resultado = resto.toFixed(2) // se colocar 0 vai arredondar para cima se as casas anteriores forem maiores que 5 e se menor vai ter que der entre 5 a menor
+    
+    exibir.innerHTML=`a divisão de ${divisor} e ${dividendo} o resultado sera ${resultado}`
+
+ }
+</script>

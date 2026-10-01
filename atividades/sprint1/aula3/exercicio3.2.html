@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><p>nome
+    <input type="text" placeholder="informe seu nome"  name="" id="ipt_nome">
+    </p>
+    <p> qual valor da atividade 1
+    <input type="text" placeholder="Informe o valor da 1 atividade" name="" id="ipt_numero1">
+    </p>
+    <p> qual valor da atividade 2
+    <input type="text" placeholder="Informe o valor da 2 atividade" name="" id="ipt_numero2">
+    </p>
+    <p> qual valor da atividade 3
+    <input type="text" placeholder="Informe o valor da 3 atividade" name="" id="ipt_numero3">
+    </p>
+    <button onclick="Mostrar()">Mostrar Nota</button>
+    <div id="exibir"></div>
+</body>
+</html>
+
+<script>
+
+    function Mostrar(){
+         let nome = ipt_nome.value;
+        let n1 = Number(ipt_numero1.value);
+        let n2 = Number(ipt_numero2.value);
+        let n3 = Number(ipt_numero3.value);
+
+        let Resultado = n1+n2+n3;
+        let media = Resultado/3;
+        let mensagem =`A soma das suas três atividades é: ${Resultado}  ${nome}, a média das suas atividades é: ${media} `
+        exibir.innerHTML=mensagem
+    }
+</script>

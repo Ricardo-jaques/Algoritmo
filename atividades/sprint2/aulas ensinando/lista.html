@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label> Valor:
+        <input type="text" name="" id="inp_valor">
+    </label>
+    <br>
+    <button onclick="enviar(), exibir(), analisar()"> adicionar</button>
+        <button onclick="remover()"> Remover</button>
+            <button onclick="pesquisa()"> Pesquisar</button>
+
+    <div id="mensagem"></div>
+</body>
+</html>
+<script>
+    let lista =[]
+    //array == vetor
+
+    function exibir(){
+        mensagem.innerHTML=`${lista}`.replaceAll(',', '<br>');
+    }
+function enviar(){
+
+    let valor = inp_valor.value
+    lista.push(valor)
+    console.log(lista)
+}
+
+function remover(){
+    let removido = lista.pop();
+        console.log(`valor removido: ${removido}`)
+
+    console.log(lista)
+}
+
+
+
+function analisar(){
+    mensagem.innerHTML=`tamanho: ${lista.length} primeiro: ${lista[0]} terceiro: ${lista[2]} ultimo: ${lista[lista.length-1]} meio: ${lista[lista.length-1/2]}`
+}
+
+function pesquisa(){
+    let valor = inp_valor.value
+
+    if(lista.includes(valor)){
+        let indice= lista.indexOf(valor)
+        mensagem.innerHTML=`a lista inclui ${valor}`
+    }
+    else{
+            mensagem.innerHTML=`a lista não inclui ${valor}`
+    }
+}
+</script>

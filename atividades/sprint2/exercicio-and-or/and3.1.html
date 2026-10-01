@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inp_vestibular"> informe a nota do vestibular interno
+        <input type="text" name="" id="inp_vestibular">
+    </label>
+    <label for="inp_enem"> informe a nota do enem
+        <input type="text" name="" id="inp_enem">
+    </label>
+    <label for="inp_redacao"> informe a nota da redação
+        <input type="text" name="" id="inp_redacao">
+    </label>
+
+    <button onclick="enviar()">Verificar aprovação</button>
+</body>
+</html>
+
+<script>
+    function enviar(){
+    let vestibular= Number(inp_vestibular.value); 
+    let enem = Number(inp_enem.value);
+    let redacao = Number(inp_redacao.value);
+    
+    if((vestibular>=700 || enem>=650) && redacao>0){
+        alert('Aprovado!')
+    }else{
+        alert('Não aprovado')
+    }
+    }
+</script>

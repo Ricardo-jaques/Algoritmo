@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> informe a velocidade do motorista
+<input type="text" id="inp_velocidade">
+</p>
+<p>informe o limite da via
+<input type="text" id="inp_limite">
+</p>
+<button onclick="enviar()">Verificar</button>
+
+<div id="exibir"></div>
+</body>
+</html>
+
+<script>
+    function enviar() {
+
+    let velocidade = Number(inp_velocidade.value);
+    let limite = Number(inp_limite.value);
+    let acima = limite * 0.20;
+    let cal = limite + acima;
+
+
+    if (velocidade <= limite) {
+        exibir.innerHTML = `Velocidade dentro do limite. Boa direção!`;
+    } 
+    else if (velocidade <= cal ) {
+        exibir.innerHTML = `Atenção! Excedendo o limite permitido.`;
+    } 
+    else {
+        exibir.innerHTML = `Multa grave! Velocidade muito acima do permitido.`;
+    }
+}
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>qual sua meta de economia:
+        <input type="text" name="" id="inp_economia">
+    </p>
+    <p>quanto tem guardado:
+        <input type="text" name="" id="inp_guardado">
+    </p>
+    <button onclick="enviar()">Analisar economia</button>
+    <div id="receba"></div>
+</body>
+</html>
+
+<script>
+    function enviar(){
+    let meta = Number(inp_economia.value)
+    let guardado = Number(inp_guardado.value)
+    let ultrapassado = guardado - meta;
+    let falta = meta - guardado
+    
+    if(meta == guardado){
+        receba.innerHTML=`Parabéns, meta alcançada!`
+
+    } 
+    else  if(meta < guardado){
+        receba.innerHTML+=`Meta ultrapassada em ${ultrapassado}`
+      }
+    
+     else{
+        receba.innerHTML+=`Força! Ainda em busca da meta! Falta ${falta}`
+
+    }
+
+}
+</script>

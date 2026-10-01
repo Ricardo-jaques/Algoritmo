@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> informe a quantidade de homens que entraram no elevador 
+        <input type="text" name="" id="inp_Homens">
+    </p>
+    <p>informe a quantidade de Mulheres que entraram no elevador
+        <input type="text" name="" id="inp_Mulheres">
+    </p>
+    <button onclick="enviar()">Analisar peso</button>
+    <div id="exibir"></div>
+</body>
+</html>
+
+<script>
+    function enviar(){
+        let homens =  Number(inp_Homens.value) 
+        let mulheres =Number(inp_Mulheres.value)
+        let resultado= (homens*90)+(mulheres*70);
+        let pesoM= resultado -500
+        
+        if(resultado<=500){
+            exibir.innerHTML=`<div style="color:green"> Elevador vai se mover, pois está com ${resultado}kg  </div>`
+        }
+        else{
+            exibir.innerHTML=`<div style="color:Red">Alguém precisa descer. Precisa perder ${pesoM}kg para mover o elevador  </div>`
+        }
+    }
+</script>
