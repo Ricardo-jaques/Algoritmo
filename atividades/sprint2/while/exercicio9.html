@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inp_numero">informe um numero
+        <input type="text" name="" id="inp_numero">
+    </label>
+    <button onclick="enviar()">Viva o 7</button>
+    <br>
+    <span id="exibir"></span>
+</body>
+</html>
+<script>
+let contagem = 0
+function enviar(){
+    let numero = inp_numero.value;
+    if(numero>=0 && numero<=200){
+        
+        while(contagem<=numero){
+            contagem++
+            if(contagem % 7 ==0){
+            exibir.innerHTML+=`${contagem}<br>`
+            }
+            
+        }
+        
+    }
+
+}
+</script>
