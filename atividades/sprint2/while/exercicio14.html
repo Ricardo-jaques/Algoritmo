@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for=""> inicio
+        <input type="text" name="" id="inp_inicio">
+    </label>
+    <label for="inp_numero"> fim
+        <input type="text" name="" id="inp_fim">
+    </label>
+    <label for="">informe um numero para teste de divisibilidade entre 3 e 13
+        <input type="text" name="" id="inp_divisibilidade">
+    </label>
+    <button onclick="enviar()">Divisível</button>
+    <br>
+    <span id="exibir"></span>
+</body>
+</html>
+<script>
+
+function enviar(){
+
+    let inicio = Number(inp_inicio.value)
+    let fim = inp_fim.value
+    let divisivel = inp_divisibilidade.value
+        if(divisivel>=3 && divisivel<=13){
+        while(inicio<=fim){
+            
+            if(inicio % divisivel ==0){
+            exibir.innerHTML+=``
+            }else{
+            exibir.innerHTML+=`${inicio}<br>`
+            }
+            inicio++
+        }
+    }else{
+        alert('Informe um numero entre 3 e 13')
+    }
+}
+</script>
