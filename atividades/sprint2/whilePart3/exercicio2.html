@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for=""> exiba um numero entra 10 e 500
+        <input type="text" name="" id="inp_numero">
+    </label>
+    <button onclick="enviar()">Somar Pares</button>
+    <br>
+    <span id="exibir"></span>
+</body>
+</html>
+
+<script>
+    function enviar(){
+        let contagem = 0;
+        let numero = inp_numero.value;
+        let soma = 0;
+        if(numero>=10 && numero<=500){
+        while(contagem<=numero){
+            if (contagem % 2 == 0){
+                soma+=contagem
+                exibir.innerHTML+=`${contagem}<br>`
+            }
+            contagem++
+        }
+        exibir.innerHTML+=`a soma de todos os pares é ${soma}<br>`
+    } else{
+        alert('informe um numero entre 10 e 100')
+    }
+    
+    }
+</script>
