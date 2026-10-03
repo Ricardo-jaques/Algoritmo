@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for=""> inicio
+        <input type="text" name="" id="inp_inicio">
+    </label>
+    <label for="inp_numero"> fim
+        <input type="text" name="" id="inp_fim">
+    </label>
+    <button onclick="enviar()">S2 Pares</button>
+    <br>
+    <span id="exibir"></span>
+</body>
+</html>
+<script>
+
+function enviar(){
+
+    let inicio = inp_inicio.value
+    let fim = inp_fim.value
+    let contagem = inicio;
+        while(contagem<=fim){
+            contagem++
+            if(contagem % 2 ==0){
+            exibir.innerHTML+=`${contagem}<br>`
+            }
+            
+        }
+}
+</script>
