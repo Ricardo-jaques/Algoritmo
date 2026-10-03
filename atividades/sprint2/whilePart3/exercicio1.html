@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for=""> informe um numero entre 0 e 100
+        <input type="text" name="" id="inp_numero">
+    </label>
+    <button onclick="enviar()">Ver Divisores</button>
+    <br>
+    <span id="exibir">
+    </span>
+</body>
+</html>
+<script>
+    function enviar(){
+        let numero = inp_numero.value
+        contagem = 0;
+        while(contagem<=numero){
+            if( numero % contagem == 0){
+                exibir.innerHTML+=`${contagem}<br>`
+            }
+            contagem++
+        }
+    }
+</script>
