@@ -6,15 +6,34 @@
     <title>Document</title>
 </head>
 <body>
-    <label>
-        <input type="text" name="">
+    <label> de quantos em quantos dias vode fas musculação;
+        <input type="text" name="" id="inp_musculacao">
     </label>
     <br>
-    <button onclick="enviar()"></button>
-    <span id="exibir">Exibir rotina mensal</span>
+    <button onclick="enviar()">Exibir rotina mensal</button>
+    <br>
+    <span id="exibir"></span>
 </body>
 </html>
 
 <script>
+    function enviar(){
+let contagem = 0
+let musculacao = inp_musculacao.value
 
+while(contagem<30){
+    contagem++
+    
+    if((contagem-1) % musculacao == 0){
+        
+        exibir.innerHTML+=`Dia ${contagem} - Musculação<br> `
+        
+    }else{
+        
+        exibir.innerHTML+=`Dia ${contagem} - Comer, dormir etc<br>`
+        
+    }
+   
+}
+    }
 </script>
