@@ -6,11 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <label for=""> informe um numero
-        <input type="text" name="" id="inp_numero">
+    <label for=""> informe a quantidade de elefantes
+        <input type="text" name="" id="inp_elefantes">
     </label>
-
-    <button onclick="enviar()">Papagaio Repetitivo</button>
+    <button onclick="enviar()">Atazanar a médium</button>
     <br>
     <span id="exibir"></span>
 </body>
@@ -19,14 +18,17 @@
 
 function enviar(){
 
-    let numero = inp_numero.value;
-    let frase = inp_frase.value;
-    let somando = frase
-    let contagem=1
-        while(contagem<=numero){
-            alert(`${contagem}-${somando}`)
-            somando+= frase
+    let elefante = inp_elefantes.value;
+    let incomodam = 'incomodam,';
+    let somando = incomodam;
+
+    let contagem=2
+        while(contagem<=elefante){
+             somando+=incomodam
+           
+            exibir.innerHTML+=`1  elefante incomoda muita gente!<br> ${contagem} elefantes,${somando} muito mais!<br>`
             contagem++
+            
         }
 }
 </script>
