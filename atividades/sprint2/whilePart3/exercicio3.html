@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for=""> informe um numero 
+        <input type="text" name="" id="inp_limite">
+    </label>
+    <label for="">informe o 2 numero
+        <input type="text" name="" id="inp_divisivel">
+    </label>
+    <button onclick="enviar()">Somar Números</button>
+    <span id="exibir"></span>
+</body>
+</html>
+
+<script>
+    function enviar(){
+        let contagem = 1;
+        let limite = inp_limite.value;
+        let divisivel = inp_divisivel.value;
+        let somar = 0
+
+        if(limite>=0 && divisivel>=limite){
+            while(contagem<=limite){
+                if(contagem % divisivel == 0){
+                    somar += contagem
+                    exibir.innerHTML += `${contagem}<br>`;
+                }
+                contagem++
+            }
+            exibir.innerHTML+=`Soma dos Múltiplos:${somar}`
+        }
+    }
+</script>
