@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="select_tabuda">
+        <option selected disabled value="">Selecione uma tabuada</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+    </select>
+
+    <label for="inp_fim"> Informe até qual tabuda deseja ir
+        <input type="text" name="" id="inp_fim">
+    </label>
+
+    <button onclick="enviar()">Ver Tabuada</button>
+    <br>
+    <span id="exibir">
+</body>
+</html>
+
+<script>
+    function enviar(){
+        let tabuada = Number(select_tabuda.value);
+        let fim = inp_fim.value
+        let contagem = 0;
+        let multiplo = 0
+        while(contagem<fim){
+            contagem++
+            multiplo= tabuada * contagem;
+            if(multiplo % 2 == 0){
+            exibir.innerHTML+=`<span  style="color: blue;">${tabuada} x ${contagem} = ${multiplo}</span><br>`
+            } else{
+               exibir.innerHTML+=`<span style="color: Red;">${tabuada} x ${contagem} = ${multiplo}</span><br>` 
+            }
+            
+        }
+        
+    }
+</script>
